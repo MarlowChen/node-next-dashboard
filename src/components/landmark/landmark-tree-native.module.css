@@ -1,0 +1,42 @@
+
+  .app{
+    text-align: center;
+    max-width: 500px;
+    margin:100px auto;
+  }
+  .input-group{
+    display: flex;
+    flex-direction: column;
+  }
+  .input-group input{
+    padding:15px;
+  }
+  
+  .btn{
+    background-color: #888CF0;
+    color:#000000;
+    margin-top: 20px;
+    box-shadow: none;
+    border:none;
+    padding:15px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .list-container{
+    margin-top:40px;
+  }
+  .list-item{
+    display:flex;
+    align-items: center;
+    background-color: #FFD2D2;
+    padding:0px 20px;
+    margin-top:15px;
+    cursor:move;
+    
+  }
+  .list-item i{
+    margin-right:20px;
+    font-size: 30px;
+  }
+ 
