@@ -1,27 +1,81 @@
-# Custom Express Server example
+#  node-next-dashboard
 
-Most of the time the default Next.js server will be enough but there are times you'll want to run your own server to integrate into an existing application. Next.js provides [a custom server api](https://nextjs.org/docs/advanced-features/custom-server).
+A simple NodeJs and NextJs full stack backend that can be cross-platform and supports various operating systems, and can be deployed using Docker.
 
-Because the Next.js server is a Node.js module you can combine it with any other part of the Node.js ecosystem. In this case we are using express.
+##  Motivation
 
-## Deploy your own
+ - RWD Dashboard ui design 
+ - offline map
+ - full role and permission design
+ - High performance, capable of exporting as static files for front-end and back-end separation.
+ - It is possible to package and encrypt
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/custom-server-express?runScript=dev)
+##  Main tech
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/custom-server-express)
+**Front-End**
 
-## How to use
+ - ReactJs
+ - NextJs 
+ - Mui - ui lib
+ - Yup - verification form
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+**Back-End**
+ - NodeJs
+ - ExpressJs - restful api lib
+ - Sequelize - database ORM
+ - passport - auth middleware
+ - node-cache 
+ - worker_threads - nodejs multithreading
 
-```bash
-npx create-next-app --example custom-server-express custom-server-express-app
-```
+**Other**
+ - Ncc - compiling nodejs 
+ - Pkg- Package your Node._js_
 
-```bash
-yarn create next-app --example custom-server-express custom-server-express-app
-```
 
-```bash
-pnpm create next-app --example custom-server-express custom-server-express-app
-```
+##  Usage
+
+### Installation
+    npm install
+    
+### Usage
+
+    npm run dev
+
+### Usage Pack 
+
+The **global ncc** must be installed first 
+[ncc](https://github.com/vercel/ncc)
+
+    npm i -g @vercel/ncc
+
+
+### run
+
+    npm run ncc-run
+
+### build
+
+    npm run ncc-build
+
+    node .\build\index.js
+
+
+補充：若要打包可以到build之後的folder使用pkg進行打包，
+可以產生一個完整的執行檔(任何os) 直接執行
+
+    http://localhost:3001/
+
+default account : Admin
+default password : 1234
+
+## .env
+
+PROJECT_SECRET 用於Jwt認證，
+NEXT_PUBLIC_WEATHER_KEY用於地圖天氣Api ，使用openweathermap
+[openweathermap](https://openweathermap.org/)
+
+
+##  Caveats
+
+因為是從商業使用的SourceCode搬運，並且移除直播相關與Schedule相關技術與邏輯，
+所以有很多沒有注意的Code，請見諒。
